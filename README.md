@@ -85,7 +85,9 @@ $ npm install -D nodemon tsx dotenv
 $ nodemon --exec tsx ./src/server.ts
 ```
 
-7. Production build procedure
+7. Configure path aliasing
+
+bonus. Production build procedure
 
 ```bash
 # compile our TS into JS
@@ -95,5 +97,3 @@ $ npm run build
 # run built files
 $ node ./dist/server.js
 ```
-
-7. Configure path aliasing
