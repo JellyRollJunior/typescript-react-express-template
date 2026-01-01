@@ -11,11 +11,12 @@ My personal template for Typescript React Express projects
     - Prettier Config
     - Path Aliasing
         - @: './src'
+    - Zod
 - Server
-    - express
-    - dev: typescript @types/node @types/express
-    - dev: nodemon ts-node
-    - build, start, dev scripts
+    - Express, Zod
+    - Dev: Typescript @types/node @types/express
+    - Dev: Nodemon ts-node
+    - Build, start, dev scripts
 
 ## Tutorial - Client
 
