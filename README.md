@@ -4,19 +4,19 @@ My personal template for Typescript React Express projects
 
 #### Includes
 
-- Client
-    - Vite Typescript React template
-    - React Router
-    - TailwindCSS
-    - Prettier Config
-    - Path Aliasing
-        - @: './src'
-    - Zod
-- Server
-    - Express, Zod, cors
-    - Dev: Typescript @types/node @types/express
-    - Dev: Nodemon ts-node dotenv
-    - Build, start, dev scripts
+-   Client
+    -   Vite Typescript React template
+    -   React Router
+    -   TailwindCSS
+    -   Prettier Config
+    -   Path Aliasing
+        -   @: './src'
+    -   Zod
+-   Server
+    -   Express, Zod, cors
+    -   Dev: Typescript @types/node @types/express
+    -   Dev: Nodemon ts-node dotenv
+    -   Build, start, dev scripts
 
 ## Tutorial - Client
 
@@ -74,23 +74,30 @@ $ npx tsc --init
 ```
 
 5. Create build / start script
-6. Install nodemon & ts-node
+6. Install nodemon & tsx & dotenv
 
 ```bash
 # nodemon: building our TS automatically on file change
-# ts-node: (nodejs interpreter for typescript)
-$ npm install -D nodemon ts-node dotenv
+# tsx: (nodejs interpreter for typescript)
+$ npm install -D nodemon tsx dotenv
 
 # now we can watch for file changes
-$ nodemon ./src/server.ts
+$ nodemon --exec tsx ./src/server.ts
 ```
 
 7. Production build procedure
+
 ```bash
 # compile our TS into JS
-# runs: npx tsc --build 
+# runs: npx tsc --build
 $ npm run build
 
 # run built files
 $ node ./dist/server.js
+```
+
+7. Configure path aliasing
+
+```bash
+$ npm install -D tsconfig-paths
 ```
