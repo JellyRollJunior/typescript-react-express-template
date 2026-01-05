@@ -15,7 +15,8 @@ My personal template for Typescript React Express projects
 -   Server
     -   Express, Zod, cors
     -   Dev: Typescript @types/node @types/express
-    -   Dev: Nodemon ts-node dotenv
+    -   Dev: Nodemon tsx dotenv
+    -   Dev: Jest supertest
     -   Build, start, dev scripts
 
 ## Tutorial - Client
@@ -87,7 +88,13 @@ $ nodemon --exec tsx ./src/server.ts
 
 7. Configure path aliasing
 
-bonus. Production build procedure
+8. Install testing libraries
+
+```bash
+npm install -D jest supertest
+```
+
+9. BONUS: Production build procedure
 
 ```bash
 # compile our TS into JS
