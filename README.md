@@ -88,10 +88,10 @@ $ nodemon --exec tsx ./src/server.ts
 
 7. Configure path aliasing
 
-8. Install testing libraries
+8. Install testing libraries & configure vitest.config.ts for path aliasing
 
 ```bash
-npm install -D jest supertest
+npm install -D vitest supertest @types/supertest vite-tsconfig-paths
 ```
 
 9. BONUS: Production build procedure
