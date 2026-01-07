@@ -12,12 +12,16 @@ My personal template for Typescript React Express projects
     -   Path Aliasing
         -   @: './src'
     -   Zod
+    -   Shared folder as dependency
 -   Server
     -   Express, Zod, cors
     -   Dev: Typescript @types/node @types/express
     -   Dev: Nodemon tsx dotenv
     -   Dev: Jest supertest
     -   Build, start, dev scripts
+    -   Shared folder as dependency
+-   Shared
+    -   Typescript, Zod
 
 ## Tutorial - Client
 
@@ -94,13 +98,28 @@ $ nodemon --exec tsx ./src/server.ts
 npm install -D vitest supertest @types/supertest vite-tsconfig-paths
 ```
 
-9. BONUS: Production build procedure
+## Tutorial - Shared & Monorepo
 
-```bash
-# compile our TS into JS
-# runs: npx tsc --build
-$ npm run build
-
-# run built files
-$ node ./dist/server.js
+1. Move client/server/shared into a packages folder
 ```
+repo/
+├─ packages/
+│  ├─ client
+│  ├─ server
+│  └─ shared
+```
+
+2. Init shared with Typescript and Zod
+```bash
+npm init -y
+npm install
+npm install -D typescript Zod
+```
+
+3. Init repo root to link packages
+    - 3a. Create package.json declaration
+    - 3b. npm install
+
+4. Create base tsconfig to enforce similar ts config to all packages
+
+
