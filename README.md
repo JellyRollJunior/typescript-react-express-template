@@ -21,7 +21,13 @@ My personal template for Typescript React Express projects
     -   Build, start, dev scripts
     -   Shared folder as dependency
 -   Shared
-    -   Typescript, Zod
+    -   Typescript
+
+#### Ethos
+
+-   Server is the source of truth
+-   Shared has types only, no runtime
+-   Shared exists to help client & server agree
 
 ## Tutorial - Client
 
@@ -101,6 +107,7 @@ npm install -D vitest supertest @types/supertest vite-tsconfig-paths
 ## Tutorial - Shared & Monorepo
 
 1. Move client/server/shared into a packages folder
+
 ```
 repo/
 ├─ packages/
@@ -109,17 +116,17 @@ repo/
 │  └─ shared
 ```
 
-2. Init shared with Typescript and Zod
+2. Init shared with Typescript
+
 ```bash
 npm init -y
 npm install
-npm install -D typescript Zod
+npm install -D typescript
 ```
 
 3. Init repo root to link packages
+
     - 3a. Create package.json declaration
     - 3b. npm install
 
 4. Create base tsconfig to enforce similar ts config to all packages
-
-
