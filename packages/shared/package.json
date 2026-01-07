@@ -1,0 +1,19 @@
+{
+    "name": "@ts-react-express-monorepo/shared",
+    "version": "0.0.1",
+    "description": "",
+    "license": "ISC",
+    "author": "",
+    "type": "module",
+    "exports": {
+        "./folder_name": "./dist/folder_name/index.js"
+    },
+    "main": "index.js",
+    "scripts": {
+        "build": "tsc -p tsconfig.json"
+    },
+    "devDependencies": {
+        "typescript": "^5.9.3",
+        "zod": "^4.3.5"
+    }
+}
